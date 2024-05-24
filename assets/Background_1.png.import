@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1ks4l40ky6nr"
-path="res://.godot/imported/_Fall.png-57e5ecd37ddbc8d8f820a80d2e090f6c.ctex"
+uid="uid://cfc22orsar7pp"
+path="res://.godot/imported/Background_1.png-2dba1b6a18ca04c8cd366425fce2eff9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://obiekty/gracz/assety/_Fall.png"
-dest_files=["res://.godot/imported/_Fall.png-57e5ecd37ddbc8d8f820a80d2e090f6c.ctex"]
+source_file="res://assets/Background_1.png"
+dest_files=["res://.godot/imported/Background_1.png-2dba1b6a18ca04c8cd366425fce2eff9.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dxtk6os8g5lo3"]
 
-[ext_resource type="PackedScene" uid="uid://dmd5tyx6punkw" path="res://obiekty/platforma/platforma.tscn" id="1_ja4ga"]
-[ext_resource type="PackedScene" uid="uid://us5giql1f3ma" path="res://obiekty/gracz/gracz.tscn" id="2_25cs8"]
+[ext_resource type="PackedScene" uid="uid://dmd5tyx6punkw" path="res://objects/platform/Platform.tscn" id="1_ja4ga"]
+[ext_resource type="PackedScene" uid="uid://us5giql1f3ma" path="res://objects/player/Player.tscn" id="2_25cs8"]
 
 [node name="scena testowa" type="Node2D"]
 

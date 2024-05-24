@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2bviui82ml2i"]
+
+[ext_resource type="Texture2D" uid="uid://bo4hs635866gp" path="res://assets/Background_0.png" id="1_h6shn"]
+[ext_resource type="Script" path="res://menus/level select/Level Select.gd" id="1_ngtir"]
+[ext_resource type="Texture2D" uid="uid://be2o2lmbbt1tw" path="res://assets/Salt.png" id="3_ad4ds"]
+[ext_resource type="PackedScene" uid="uid://c61hfvwtk2u4i" path="res://objects/world icon/World Icon.tscn" id="4_lie4t"]
+
+[node name="LevelSelect" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ngtir")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_h6shn")
+
+[node name="Return" type="Button" parent="."]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 34.0
+offset_right = 167.0
+offset_bottom = 91.0
+theme_override_font_sizes/font_size = 35
+text = "Return"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -141.5
+offset_top = 68.0
+offset_right = 141.5
+offset_bottom = 137.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 50
+text = "Select Level"
+
+[node name="WorldIcon" parent="." instance=ExtResource("4_lie4t")]
+position = Vector2(161, 432)
+title = "Test World"
+
+[node name="WorldIcon2" parent="." instance=ExtResource("4_lie4t")]
+position = Vector2(456, 466)
+title = "World 1"
+
+[node name="WorldIcon3" parent="." instance=ExtResource("4_lie4t")]
+position = Vector2(898, 339)
+title = "World 2"
+
+[node name="PlayerSprite" type="Sprite2D" parent="."]
+scale = Vector2(1.125, 0.549107)
+texture = ExtResource("3_ad4ds")
+centered = false
+
+[connection signal="pressed" from="Return" to="." method="_on_return_pressed"]

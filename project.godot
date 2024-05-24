@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="Projekt na zajeciach robiony"
+run/main_scene="res://menus/main menu/Main Menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+SceneLoader="*res://scripts/SceneLoader.gd"
 
 [input]
 
