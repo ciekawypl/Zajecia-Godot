@@ -5,6 +5,14 @@ var gravity = speed / 15
 var jump = speed * 1.5
 var direction :Vector2
 
+@export var coins = 0
+signal coinCollected
+
+
+func onCoinCollision():
+	coins += 1
+	coinCollected.emit()
+
 
 func playAnimations():
 	if not is_on_floor():

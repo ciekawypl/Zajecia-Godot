@@ -23,8 +23,6 @@ func _input(event):
 	
 	if event.is_action_pressed("ui_accept"):
 		if currentWorld == 0: 
-			SceneLoader.loadScene("res://levels/test scene/Test Scene.tscn") 
-		#elif current_world == 1:
-			#Funkcje.loadin_screan_to_screan("")
-		#elif  current_world == 2:
-			#Funkcje.loadin_screan_to_screan("")
+			SceneLoader.loadScene("res://levels/test scene/Test Scene.tscn")
+		if currentWorld == 1:
+			SceneLoader.loadScene("res://levels/level 1/Level 1.tscn")
