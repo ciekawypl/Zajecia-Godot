@@ -4,10 +4,16 @@ var speed = 500
 var gravity = speed / 15
 var jump = speed * 1.5
 var direction :Vector2
+var push_force= 80
 
 @export var coins = 0
 signal coinCollected
 
+func onSpikeColision():
+	$"../CanvasLayer/lose menu".show()
+
+func onDoorColision():
+	$"../CanvasLayer/win menu".show()
 
 func onCoinCollision():
 	coins += 1
@@ -43,3 +49,8 @@ func _process(delta):
 	
 	move_and_slide()
 	playAnimations()
+#Lupa do kolizji RigidBody2D
+	for i in get_slide_collision_count():
+		var c = get_slide_collision(i)
+		if c.get_collider() is RigidBody2D:
+			c.get_collider().apply_central_impulse(-c.get_normal() * push_force )
