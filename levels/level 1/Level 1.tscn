@@ -468,10 +468,10 @@ visible = false
 [node name="win menu" parent="CanvasLayer" instance=ExtResource("10_axify")]
 visible = false
 
-[connection signal="body_entered" from="TileMap/Door" to="TileMap/Door" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/Spikes" to="TileMap/Spikes" method="_on_body_entered"]
 [connection signal="body_entered" from="TileMap/Coin" to="TileMap/Coin" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@124582" to="TileMap/@Area2D@124582" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@124583" to="TileMap/@Area2D@124583" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@124584" to="TileMap/@Area2D@124584" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@19463" to="TileMap/@Area2D@19463" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@19464" to="TileMap/@Area2D@19464" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@19465" to="TileMap/@Area2D@19465" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/Spikes" to="TileMap/Spikes" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/Door" to="TileMap/Door" method="_on_body_entered"]
 [connection signal="coinCollected" from="Player" to="." method="_on_player_coin_collected"]
