@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://ey5hpp3sw6m"]
+
+[ext_resource type="Texture2D" uid="uid://b1cehrq7bo7uv" path="res://log_wall.png" id="1_5rhnt"]
+[ext_resource type="Script" path="res://objects/moving wall/moving_wall_point.gd" id="1_sjxec"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ue1ml"]
+size = Vector2(35, 91)
+
+[sub_resource type="Animation" id="Animation_nlwlh"]
+resource_name = "move"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(-3, 3),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dvi1m"]
+_data = {
+"move": SubResource("Animation_nlwlh")
+}
+
+[node name="Moving Wall Point" type="PathFollow2D"]
+rotates = false
+script = ExtResource("1_sjxec")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_5rhnt")
+
+[node name="Area2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1.5, 1.5)
+shape = SubResource("RectangleShape2D_ue1ml")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_dvi1m")
+}

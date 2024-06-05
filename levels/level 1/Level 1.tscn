@@ -448,6 +448,7 @@ layer_1/tile_data = PackedInt32Array(196624, 1, 65536, 65546, 1, 65536, 327681, 
 
 [node name="Player" parent="." instance=ExtResource("2_4pgdi")]
 position = Vector2(323, 256)
+player_name = "Ghost"
 
 [node name="Label" type="Label" parent="."]
 offset_left = 51.0
@@ -468,10 +469,4 @@ visible = false
 [node name="win menu" parent="CanvasLayer" instance=ExtResource("10_axify")]
 visible = false
 
-[connection signal="body_entered" from="TileMap/Coin" to="TileMap/Coin" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@19463" to="TileMap/@Area2D@19463" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@19464" to="TileMap/@Area2D@19464" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@19465" to="TileMap/@Area2D@19465" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/Spikes" to="TileMap/Spikes" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/Door" to="TileMap/Door" method="_on_body_entered"]
 [connection signal="coinCollected" from="Player" to="." method="_on_player_coin_collected"]
